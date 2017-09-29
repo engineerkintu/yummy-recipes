@@ -156,7 +156,7 @@ def add_recipe_category():
     form = RecipeCategoryForm()
     if form.validate_on_submit():
         recipe_category = RecipeCategory(category_name=form.recipe_name.data,
-                        user = form.user.data)
+                        details = form.details.data)
         try:
             #add recipe to the database
             db.session.add(recipe_category)
@@ -189,7 +189,7 @@ def edit_recipe_category(cat_id):
     form = Recipe_on_submit():
         if form.validate_on_submit():
             category_name=form.category_name.data,
-            user = form.user.data
+            details = form.details.data
             db.session.commit()
             flash('You have successfully edited the recipe category.')
 
@@ -205,7 +205,7 @@ def edit_recipe_category(cat_id):
 
     
 
-@admin.rout('/recipe_categories/delete<int:id2>', methods=['GET', 'POST'])
+@chef.rout('/recipe_categories/delete<int:id2>', methods=['GET', 'POST'])
 @login_required
 def delete_recipe_category(id2):
     

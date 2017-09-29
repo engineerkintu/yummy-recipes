@@ -40,7 +40,7 @@ class AddRecipeCategoryForm(FlaskForm):
     """
     category_name = StringField('Category Name', validators = [DataRequired])
     details = StringField('Details')
-    user = StringField('Cook')
+    
     submit = SubmitField('Submit')
 
 
@@ -50,7 +50,7 @@ class EditRecipeCategory(FlaskForm):
     Form for chef to edit recipe category
     """
     category_name = StringField('Category Name', validators = [DataRequired])
-    user = StringField('Cook')
+    details = StringField('Details')
     submit = SubmitField('Save')
     
 
