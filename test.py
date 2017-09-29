@@ -12,7 +12,7 @@ class TestModels(TestBase):
         """
         self.assertEqual(User.query.count(), 2)
 
-    def test_recipe_model(self):
+    def test_recipe_category_model(self):
         """
         Test number of records in Recipe table
         """
